@@ -1,0 +1,13 @@
+html body{
+    font-family: sans-serif;
+}
+
+.m-container{
+    margin: auto;
+    width: 90%;
+
+}
+
+.m-mt-50{
+    margin-top: 50px;
+}

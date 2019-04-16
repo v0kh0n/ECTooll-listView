@@ -1,0 +1,32 @@
+.m-table{
+    width: 100%;
+    border: 1px solid #ddd;
+    /* border-collapse: collapse; */
+    border-spacing: 0;
+    border-radius: 5px;
+}
+
+/* .m-table thead tr{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    text-align: left;
+} */
+
+.m-table thead{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.m-table thead tr th, .m-table tbody tr td {
+    padding: 14px;
+    /* border-bottom: 1px solid #ddd; */
+    
+}
+
+
+
+.m-table tbody tr:nth-child(even){
+    background-color: #f2f2f2
+}

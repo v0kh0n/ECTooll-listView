@@ -1,0 +1,30 @@
+<table class="m-table">
+    <thead>
+        <tr>
+            <th *ngFor= "let col of cols">
+                <input type="checkbox" *ngIf="col.name === 'checkbox'" [(ngModel)]="isCheckAll" (change)="onToggleCheckAll()"/>
+                {{col.name != "checkbox" ? col.name : ""}}
+            </th>
+            
+        </tr>
+
+    </thead>
+    <tbody>
+
+        <tr *ngFor = "let user of users">
+            <td *ngFor = "let col of cols">
+                    <input type="checkbox" [(ngModel)]="user.isCheck" *ngIf="col.name === 'checkbox'" (change)="onHandleChange()"/>
+                    <ng-container *ngIf="col.name === 'action'">
+                            <button  *ngFor="let item of col['actions']">edit</button>
+                    </ng-container>
+                    {{ col.name === "status" ? "true" : "" }}
+                    
+                    {{(col.name != "checkbox" && col.name != "action" && col.name != "status" ) ? user[col.prop] : ""}}
+                    
+            </td>
+            
+        </tr>
+
+
+    </tbody>
+</table>
